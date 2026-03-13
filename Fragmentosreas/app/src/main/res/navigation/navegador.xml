@@ -11,11 +11,11 @@
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio">
         <action
-            android:id="@+id/action_inicio_to_cuadrado"
-            app:destination="@id/cuadrado" />
-        <action
             android:id="@+id/action_inicio_to_rectangulo"
             app:destination="@id/rectangulo" />
+        <action
+            android:id="@+id/action_inicio_to_cuadrado"
+            app:destination="@id/cuadrado" />
         <action
             android:id="@+id/action_inicio_to_circulo"
             app:destination="@id/circulo" />
@@ -27,11 +27,8 @@
         android:label="fragment_cuadrado"
         tools:layout="@layout/fragment_cuadrado" >
         <action
-            android:id="@+id/action_cuadrado_to_rectangulo"
-            app:destination="@id/rectangulo" />
-        <action
-            android:id="@+id/action_cuadrado_to_circulo"
-            app:destination="@id/circulo" />
+            android:id="@+id/action_cuadrado_to_inicio"
+            app:destination="@id/inicio" />
     </fragment>
 
     <fragment
@@ -40,11 +37,8 @@
         android:label="fragment_rectangulo"
         tools:layout="@layout/fragment_rectangulo" >
         <action
-            android:id="@+id/action_rectangulo_to_cuadrado"
-            app:destination="@id/cuadrado" />
-        <action
-            android:id="@+id/action_rectangulo_to_circulo"
-            app:destination="@id/circulo" />
+            android:id="@+id/action_rectangulo_to_inicio"
+            app:destination="@id/inicio" />
     </fragment>
 
     <fragment
@@ -53,11 +47,8 @@
         android:label="fragment_circulo"
         tools:layout="@layout/fragment_circulo" >
         <action
-            android:id="@+id/action_circulo_to_cuadrado"
-            app:destination="@id/cuadrado" />
-        <action
-            android:id="@+id/action_circulo_to_rectangulo"
-            app:destination="@id/rectangulo" />
+            android:id="@+id/action_circulo_to_inicio"
+            app:destination="@id/inicio" />
     </fragment>
 
 </navigation>
