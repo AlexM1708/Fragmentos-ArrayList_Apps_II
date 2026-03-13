@@ -68,11 +68,11 @@
             android:backgroundTint="#FF9800" />
 
         <Button
-            android:id="@+id/botonm"
+            android:id="@+id/botont"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Circulo"
+            android:text="Triángulo"
             android:backgroundTint="#2196F3" />
     </LinearLayout>
 </LinearLayout>

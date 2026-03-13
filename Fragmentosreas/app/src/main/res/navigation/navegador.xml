@@ -17,8 +17,8 @@
             android:id="@+id/action_inicio_to_cuadrado"
             app:destination="@id/cuadrado" />
         <action
-            android:id="@+id/action_inicio_to_circulo"
-            app:destination="@id/circulo" />
+            android:id="@+id/action_inicio_to_triangulo"
+            app:destination="@id/triangulo" />
     </fragment>
 
     <fragment
@@ -42,12 +42,12 @@
     </fragment>
 
     <fragment
-        android:id="@+id/circulo"
-        android:name="com.example.fragmentos_reas.Circulo"
-        android:label="fragment_circulo"
-        tools:layout="@layout/fragment_circulo" >
+        android:id="@+id/triangulo"
+        android:name="com.example.fragmentos_reas.Triangulo"
+        android:label="fragment_triangulo"
+        tools:layout="@layout/fragment_triangulo" >
         <action
-            android:id="@+id/action_circulo_to_inicio"
+            android:id="@+id/action_triangulo_to_inicio"
             app:destination="@id/inicio" />
     </fragment>
 

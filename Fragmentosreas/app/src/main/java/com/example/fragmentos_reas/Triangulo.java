@@ -12,16 +12,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Circulo extends Fragment implements View.OnClickListener {
+public class Triangulo extends Fragment implements View.OnClickListener {
 
     TextView vista;
-    EditText num1;
+    EditText num1, num2;
     Button botons, botonr, botonm, botonc;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_circulo, container, false);
+        return inflater.inflate(R.layout.fragment_triangulo, container, false);
     }
 
     @Override
@@ -30,11 +30,12 @@ public class Circulo extends Fragment implements View.OnClickListener {
 
         vista = view.findViewById(R.id.vista);
         num1 = view.findViewById(R.id.num1);
+        num2 = view.findViewById(R.id.num2);
         botonc = view.findViewById(R.id.botonc);
 
         botons = view.findViewById(R.id.botons);
         botonr = view.findViewById(R.id.botonr);
-        botonm = view.findViewById(R.id.botonm);
+        botonm = view.findViewById(R.id.botont);
 
         botons.setOnClickListener(this);
         botonr.setOnClickListener(this);
@@ -55,17 +56,17 @@ public class Circulo extends Fragment implements View.OnClickListener {
             }
             else
                 if (cadenitas.equals("Circulo")) {
-                    Navigation.findNavController(view).navigate(R.id.circulo);
+                    Navigation.findNavController(view).navigate(R.id.triangulo);
                 }
                 else {
-                    if (!num1.getText().toString().isEmpty()) {
-                        double radio = Double.parseDouble(num1.getText().toString());
-                        double area = Math.PI * Math.pow(radio, 2);
-
-                        vista.setText("Área: " + String.format("%.2f", area));
+                    if (!num1.getText().toString().isEmpty() && !num2.getText().toString().isEmpty()) {
+                        double base = Double.parseDouble(num1.getText().toString());
+                        double altura = Double.parseDouble(num2.getText().toString());
+                        double area = (base * altura) / 2;
+                        vista.setText("Área: " + area);
                     }
                     else {
-                        vista.setText("Introduce el radio");
+                        vista.setText("Introduce base y altura");
                         }
                     }
     }

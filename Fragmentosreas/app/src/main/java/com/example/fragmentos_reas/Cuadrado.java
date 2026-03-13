@@ -34,7 +34,7 @@ public class Cuadrado extends Fragment implements View.OnClickListener {
 
         botons = view.findViewById(R.id.botons); // Botón Cuadrado
         botonr = view.findViewById(R.id.botonr); // Botón Rectángulo
-        botonm = view.findViewById(R.id.botonm); // Botón Círculo
+        botonm = view.findViewById(R.id.botont); // Botón Círculo
 
         botons.setOnClickListener(this);
         botonr.setOnClickListener(this);
@@ -54,8 +54,8 @@ public class Cuadrado extends Fragment implements View.OnClickListener {
                 Navigation.findNavController(view).navigate(R.id.rectangulo);
             }
             else
-                if (cadenitas.equals("Circulo")) {
-                    Navigation.findNavController(view).navigate(R.id.circulo);
+                if (cadenitas.equals("Triángulo")) {
+                    Navigation.findNavController(view).navigate(R.id.triangulo);
                 }
                 else {
                     if (!num1.getText().toString().isEmpty()) {

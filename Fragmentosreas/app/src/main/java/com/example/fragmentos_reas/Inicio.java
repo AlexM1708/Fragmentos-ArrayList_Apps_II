@@ -26,7 +26,7 @@ public class Inicio extends Fragment implements View.OnClickListener {
 
         botons = view.findViewById(R.id.botons);
         botonr = view.findViewById(R.id.botonr);
-        botonm = view.findViewById(R.id.botonm);
+        botonm = view.findViewById(R.id.botont);
 
         botons.setOnClickListener(this);
         botonr.setOnClickListener(this);
@@ -41,8 +41,8 @@ public class Inicio extends Fragment implements View.OnClickListener {
             Navigation.findNavController(view).navigate(R.id.cuadrado);
         } else if (textoBoton.equals("Rectángulo")) {
             Navigation.findNavController(view).navigate(R.id.rectangulo);
-        } else if (textoBoton.equals("Circulo")) {
-            Navigation.findNavController(view).navigate(R.id.circulo);
+        } else if (textoBoton.equals("Triángulo")) {
+            Navigation.findNavController(view).navigate(R.id.triangulo);
         }
     }
 }
