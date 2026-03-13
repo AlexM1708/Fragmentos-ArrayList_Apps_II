@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegador"
+    app:startDestination="@id/inicio">
+
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.fragmentos_calculadora.Inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_suma"
+            app:destination="@id/suma" />
+        <action
+            android:id="@+id/action_inicio_to_resta"
+            app:destination="@id/resta" />
+        <action
+            android:id="@+id/action_inicio_to_multiplica"
+            app:destination="@id/multiplica" />
+        <action
+            android:id="@+id/action_inicio_to_divide"
+            app:destination="@id/divide" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/suma"
+        android:name="com.example.fragmentos_calculadora.Suma"
+        android:label="fragment_suma"
+        tools:layout="@layout/fragment_suma" >
+        <action
+            android:id="@+id/action_suma_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/resta"
+        android:name="com.example.fragmentos_calculadora.Resta"
+        android:label="fragment_resta"
+        tools:layout="@layout/fragment_resta" >
+        <action
+            android:id="@+id/action_resta_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiplica"
+        android:name="com.example.fragmentos_calculadora.Multiplica"
+        android:label="fragment_multiplica"
+        tools:layout="@layout/fragment_multiplica" >
+        <action
+            android:id="@+id/action_multiplica_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/divide"
+        android:name="com.example.fragmentos_calculadora.Divide"
+        android:label="fragment_divide"
+        tools:layout="@layout/fragment_divide" >
+        <action
+            android:id="@+id/action_divide_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+</navigation>

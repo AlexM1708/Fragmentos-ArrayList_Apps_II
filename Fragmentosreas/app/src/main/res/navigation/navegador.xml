@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegador"
+    app:startDestination="@id/inicio">
+
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.fragmentos_reas.Inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio">
+        <action
+            android:id="@+id/action_inicio_to_cuadrado"
+            app:destination="@id/cuadrado" />
+        <action
+            android:id="@+id/action_inicio_to_rectangulo"
+            app:destination="@id/rectangulo" />
+        <action
+            android:id="@+id/action_inicio_to_circulo"
+            app:destination="@id/circulo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cuadrado"
+        android:name="com.example.fragmentos_reas.Cuadrado"
+        android:label="fragment_cuadrado"
+        tools:layout="@layout/fragment_cuadrado" >
+        <action
+            android:id="@+id/action_cuadrado_to_rectangulo"
+            app:destination="@id/rectangulo" />
+        <action
+            android:id="@+id/action_cuadrado_to_circulo"
+            app:destination="@id/circulo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rectangulo"
+        android:name="com.example.fragmentos_reas.Rectangulo"
+        android:label="fragment_rectangulo"
+        tools:layout="@layout/fragment_rectangulo" >
+        <action
+            android:id="@+id/action_rectangulo_to_cuadrado"
+            app:destination="@id/cuadrado" />
+        <action
+            android:id="@+id/action_rectangulo_to_circulo"
+            app:destination="@id/circulo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/circulo"
+        android:name="com.example.fragmentos_reas.Circulo"
+        android:label="fragment_circulo"
+        tools:layout="@layout/fragment_circulo" >
+        <action
+            android:id="@+id/action_circulo_to_cuadrado"
+            app:destination="@id/cuadrado" />
+        <action
+            android:id="@+id/action_circulo_to_rectangulo"
+            app:destination="@id/rectangulo" />
+    </fragment>
+
+</navigation>

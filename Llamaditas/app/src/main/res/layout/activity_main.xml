@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="25dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Llamadas - Alex"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="Duración de llamada"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/blocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Local"/>
+
+    <Button
+        android:id="@+id/bnacional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nacional"/>
+
+    <Button
+        android:id="@+id/binternacional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Internacional"/>
+
+    <Button
+        android:id="@+id/bpago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Pagar"/>
+
+    <TableLayout
+        android:id="@+id/tabla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:stretchColumns="*"
+        android:background="#eeeeee"
+        android:padding="10dp">
+
+        <TableRow>
+
+            <TextView
+                android:text="Tipo"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:text="Duración"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:text="Costo"
+                android:textStyle="bold"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
